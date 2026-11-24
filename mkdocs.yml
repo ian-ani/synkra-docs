@@ -1,0 +1,36 @@
+site_name: Synkra Docs
+
+theme:
+  name: material
+  language: es
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: default
+      primary: blue
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      primary: blue
+      accent: yellow
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+
+nav:
+  - Inicio: index.md
+  - Presentación: 01-presentacion.md
+  - Caracterización: 02-caracterizacion.md
+  - Análisis de requisitos: 03-analisis_requisitos.md
+  - Diseño de la solución: 04-diseno.md
+  - Planificación: 05-planificacion.md
+  - Modelo de datos: 06-modelo_datos.md
+  - Arquitectura: 07-arquitectura.md
+  - Desarrollo: 08-desarrollo.md
+  - Pruebas: 09-pruebas.md
+  - Seguridad: 10-seguridad.md
+  - Despliegue: 11-despliegue.md
+  - Manuales: 12-manual.md
+  - Conclusiones: 13-conclusiones.md
