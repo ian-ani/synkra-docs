@@ -5,6 +5,8 @@ theme:
   language: es
   icon:
     repo: fontawesome/brands/github
+  logo: assets/synkra_logo.png
+  favicon: assets/synkra_logo.png
   palette:
     - scheme: default
       primary: blue
@@ -42,3 +44,15 @@ nav:
   - Despliegue: 11-despliegue.md
   - Manuales: 12-manual.md
   - Conclusiones: 13-conclusiones.md
+
+extra:
+  social:
+    - icon: fontawesome/solid/computer
+      link: https://github.com/Mokey09/LilBrosTeam-Proyecto2DAM-desktop
+      name: Código fuente en GitHub del programa de escritorio
+    - icon: fontawesome/solid/mobile-screen
+      link: https://github.com/Mokey09/LilBrosTeam-Proyecto2DAM-mobile
+      name: Código fuente en GitHub de la aplicación móvil
+    - icon: fontawesome/solid/server
+      link: https://github.com/Mokey09/LilBrosTeam-Proyecto2DAM-api
+      name: Código fuente en GitHub de la API
