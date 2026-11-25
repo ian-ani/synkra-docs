@@ -1,7 +1,5 @@
 # 3. Análisis de requisitos
 
-Este apartado recoge las funcionalidades que deberá ofrecer Synkra y las condiciones que deberá cumplir. Algunos requisitos todavía están pendientes de concretar, ya que dependen de las normas del centro y de las decisiones técnicas del proyecto.
-
 ## 3.1. Requisitos funcionales
 
 Los requisitos funcionales iniciales identificados son los siguientes:
@@ -24,27 +22,36 @@ El equipo directivo también forma parte del profesorado, por lo que podrá real
 
 ## 3.2. Requisitos no funcionales
 
-- Seguridad.
+### 3.2.1. Seguridad
 
-*// TODO*
+- Las contraseñas se almacenan de forma segura mediante funciones hash y el uso de un *salt*, dificultando su recuperación mediante tablas arcoíris y ataques basados en contraseñas precalculadas.
+- La autenticación de los usuarios se realiza mediante tokens JWT.
+- Los permisos de acceso dependen del rol asignado a cada usuario.
+- Los usuarios no pueden acceder a operaciones o información a la que no hayan sido autorizados.
+- Los usuarios no autenticados no tienen acceso a ningún recurso de la API.
 
-*Apartado 2.2, pero estamos con Spring Security, cifrado contraseñas, tokens, etc*
+### 3.2.2. Rendimiento
 
-- Rendimiento.
+**Pendiente de determinar.**
 
-*Por escribir*
+### 3.2.3. Usabilidad
 
-- Usabilidad.
+- La interfaz es intuitiva y fácil de utilizar.
+- Las opciones están organizadas según el perfil del usuario.
+- Los formularios muestran mensajes claros cuando se produce un error.
+- El usuario puede consultar fácilmente el estado de sus solicitudes.
 
-*Apartado 3.1*
+### 3.2.4. Compatibilidad
 
-- Compatibilidad.
+- La aplicación del profesorado funciona en dispositivos Android y navegadores web compatibles.
+- La aplicación de escritorio funciona en sistemas Windows.
+- Ambas aplicaciones se pueden comunicar con la misma API.
 
-*Apartado 5.1.A*
+### 3.2.5. Disponibilidad
 
-- Disponibilidad.
-
-*Apartados 2.2 y 6.3, aspectos relacionados con el calendario y la disponibilidad de solicitudes*
+- El profesorado puede consultar la disponibilidad de días moscosos y realizar solicitudes cuando el servicio está operativo.
+- La API y la base de datos estarán funcionando para permitir las operaciones de cada aplicación.
+- Los calendarios permiten identificar los días en los que se pueden realizar solicitudes y aquellos que están bloqueados.
 
 ## 3.3. Usuarios y roles
 
