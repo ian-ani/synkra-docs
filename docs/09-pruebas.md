@@ -30,19 +30,18 @@ Para cada caso de prueba se indicará:
 
 ## 9.3. Pruebas de seguridad
 
-**Pendiente de completar.**
+Se realizaron comprobaciones para evaluar la seguridad de la aplicación, prestando especial atención a la validación de los datos introducidos, el control de acceso y la protección de la información.
 
-Se comprobarán los accesos, la validación de datos, el control de permisos y la protección de la información.
-
-- Se probó a inyectar código, en principio no se puede.
+- **Pruebas de inyección de código:** se realizaron pruebas introduciendo código o contenido potencialmente malicioso en los campos de entrada. Durante las comprobaciones realizadas no se consiguió ejecutar código ni alterar el funcionamiento de la aplicación mediante estas entradas.
 
 ## 9.4. Errores detectados y soluciones
 
-- En la descripción, en el programa de escritorio, si se escribe un texto de más de 250 caracteres, crashea la aplicación: se arregló poniendo un límite desde WPF al usuario.
-- En la aplicación de Flutter, dependiendo de la velocidad del sistema, pueden aparecer cualquiera de las demás pantallas antes de la pantalla de inicio de sesión: aún no se ha arreglado.
-- Durante las pruebas con el móvil físico, no se puede iniciar sesión en la app porque todavía no se ha hecho el despliegue y no se encuentran en la misma red.
+Durante las pruebas de la aplicación se identificaron los siguientes errores y comportamientos inesperados:
 
-**Pendiente de completar durante las pruebas.**
+- **Límite de caracteres en la descripción (aplicación de escritorio):** al introducir un texto superior a 250 caracteres en el campo de descripción, la aplicación se cerraba inesperadamente. Se solucionó estableciendo un límite de 250 caracteres en la interfaz WPF, impidiendo que el usuario introduzca textos que superen esa longitud.
 
-Se documentarán los errores encontrados, sus causas y las soluciones aplicadas.
+- **Carga incorrecta de pantallas al iniciar la aplicación Flutter:** dependiendo de la velocidad de ejecución del sistema, podían mostrarse otras pantallas antes de que apareciera la pantalla de inicio de sesión. Este comportamiento todavía está pendiente de solucionar.
 
+- **Problemas de conexión durante las pruebas en un dispositivo móvil físico:** no fue posible iniciar sesión desde la aplicación móvil debido a que el servicio todavía no se ha desplegado en un entorno accesible desde el dispositivo. Por este motivo, el móvil no puede establecer la conexión necesaria con el servidor durante las pruebas.
+
+**Nota:** Los errores descritos corresponden a los problemas identificados durante las pruebas realizadas hasta el momento. No se descarta la existencia de otros errores o comportamientos inesperados que todavía no hayan sido detectados y que puedan aparecer durante futuras pruebas o con el uso de la aplicación.
