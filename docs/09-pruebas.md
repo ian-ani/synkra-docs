@@ -34,8 +34,15 @@ Para cada caso de prueba se indicará:
 
 Se comprobarán los accesos, la validación de datos, el control de permisos y la protección de la información.
 
+- Se probó a inyectar código, en principio no se puede.
+
 ## 9.4. Errores detectados y soluciones
+
+- En la descripción, en el programa de escritorio, si se escribe un texto de más de 250 caracteres, crashea la aplicación: se arregló poniendo un límite desde WPF al usuario.
+- En la aplicación de Flutter, dependiendo de la velocidad del sistema, pueden aparecer cualquiera de las demás pantallas antes de la pantalla de inicio de sesión: aún no se ha arreglado.
+- Durante las pruebas con el móvil físico, no se puede iniciar sesión en la app porque todavía no se ha hecho el despliegue y no se encuentran en la misma red.
 
 **Pendiente de completar durante las pruebas.**
 
 Se documentarán los errores encontrados, sus causas y las soluciones aplicadas.
+
