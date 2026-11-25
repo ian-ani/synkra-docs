@@ -12,9 +12,24 @@ La solución propuesta estará formada por dos partes principales:
 
 ## 4.2. Diseño de la interfaz
 
-La interfaz deberá facilitar el uso de las funcionalidades principales según el perfil de cada usuario.
+La interfaz deberá facilitar el uso de las funcionalidades principales según el perfil de cada usuario.  
+El diseño de las interfaces puede verse sujeto a cambios y no reflejar el aspecto de las pantallas definitivas.
 
-*// TODO añadir las imagenes del Google Drive*
+### Diseño de la interfaz de escritorio:
+
+![Interfaz de escritorio para inicio de sesión](assets/escritorio/escritorio_login.png)
+
+![Interfaz de escritorio para el calendario del director](assets/escritorio/escritorio_calendario.png)
+
+![Interfaz de escritorio para el calendario del gestor](assets/escritorio/escritorio_calendario2.png)
+
+![Interfaz de escritorio para la solicitud del día moscoso](assets/escritorio/escritorio_solicitud.png)
+
+### Diseño de la interfaz móvil y web:
+
+![Interfaz móvil](assets/movil/app1.png)
+
+![Interfaz móvil](assets/movil/app2.png)
 
 ## 4.3. Diagramas
 
