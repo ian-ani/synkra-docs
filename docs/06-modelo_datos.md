@@ -22,7 +22,60 @@ La base de datos se organizará mediante tablas relacionadas entre sí. Su estru
 
 ## 6.2. Diagrama entidad-relación
 
-*//TODO añadir aquí la imagen de la E-R*
+```mermaid
+erDiagram
+    profesor {
+        int id PK
+        string dni UK
+        string nombre
+        string apellidos
+        string email UK
+        string contrasenya
+        string rol
+        string telefono
+        string direccion
+        string cp
+        string localidad
+        string cuerpo
+        string especialidad
+        string departamento
+    }
+
+    sesion_horario {
+        int id PK
+        string cod_grupo
+        int id_profe FK
+        string dia_semana
+        time hora_inicio
+        time hora_fin
+    }
+
+    moscoso_solicitudes {
+        int id PK
+        int id_profesor FK
+        date fecha
+        string estado
+        string tipo
+    }
+
+    grupos_alumnado {
+        string cod_grupo PK
+        string nombre_grupo
+        int id_profesor FK
+    }
+
+    bloqueos_calendario {
+        int id PK
+        date fecha_inicio
+        date fecha_fin
+        string tipo
+    }
+
+    profesor ||--o{ sesion_horario : "imparte"
+    profesor ||--o{ moscoso_solicitudes : "solicita"
+    profesor ||--o{ grupos_alumnado : "tutorea"
+    sesion_horario }o--|| grupos_alumnado : "pertenece"
+```
 
 ## 6.3. Diccionario de datos
 
