@@ -86,7 +86,56 @@ Se documentará la estructura de las tablas de la base de datos, indicando para 
 - Clave primaria y claves ajenas, cuando corresponda.
 - Restricciones aplicables.
 
-*//TODO aqui es poner lo que tenemos en Spring Boot en los modelos*
+### Clase BloqueoCalendario
+
+| Campo | Tipo | PK/FK | Restricciones | Descripción |
+|-------|------|-------|---------------|-------------|
+| `id` | `INT` | PK | `NOT NULL`, autoincremental | Identificador único de bloqueo |
+| `fecha` | `DATE` | - | `UNIQUE`, `NOT NULL` | Día exacto bloqueado en el calendario |
+| `comentario` | `VARCHAR(255)` | - | Tamaño máximo de 255 caracteres | Comentario o razón del día bloqueado |
+| `tipo` | `ENUM` | - | - | Categoría del bloqueo (festivo, vacaciones, etc.). |
+
+### Clase GrupoAlumnado
+
+| Campo | Tipo | PK/FK | Restricciones | Descripción |
+|-------|------|-------|---------------|-------------|
+| `cod_grupo` | `INT` | PK | `NOT NULL`, autoincremental | Identificador único del grupo de alumnado |
+| `id_profesor` | `INT` | FK | - | Identificador único del profesor |
+| `nombre_grupo` | `VARCHAR(255)` | - | - | Nombre del grupo |
+
+### Clase Profesor
+
+| Campo | Tipo | PK/FK | Restricciones | Descripción |
+|-------|------|-------|---------------|-------------|
+| `id` | `INT(11)` | PK | `NOT NULL`, autoincremental | Identificador único del grupo de alumnado |
+| `nombre` | `VARCHAR(255)` | - | - | Nombre del profesor |
+| `apellidos` | `VARCHAR(255)` | - | - | Apellidos del profesor |
+| `dni` | `VARCHAR(255)` | - | `UNIQUE` | Documento que identifica al profesor |
+| `email` | `VARCHAR(255)` | - | `UNIQUE` | Correo electrónico del profesor |
+| `contrasena` | `VARCHAR(255)` | - | `NOT NULL` | Contraseña cifrada del profesor |
+| `cp` | `INT(11)` | - | `NOT NULL` | Código postal de residencia del profesor |
+| `localidad` | `VARCHAR(255)` | - | - | Localidad de residencia del profesor |
+| `telefono` | `VARCHAR(255)` | - | - | Teléfono de contacto del profesor |
+| `direccion` | `VARCHAR(255)` | - | - | Dirección de residencia del profesor |
+| `cuerpo` | `VARCHAR(255)` | - | - | Cuerpo docente al que pertenece |
+| `rol` | `ENUM` | - | `NOT NULL` | Rol dentro de la aplicación, determina sus permisos |
+| `especialidad` | `VARCHAR(255)` | - | - | Especialidad del profesor |
+| `departamento` | `VARCHAR(255)` | - | - | Departamento al que pertenece el profesor |
+
+### Clase SesionHorario
+
+| Campo | Tipo | PK/FK | Restricciones | Descripción |
+|-------|------|-------|---------------|-------------|
+| `id` | `INT(11)` | PK | `NOT NULL`, autoincremental | Identificador único de la sesión del profesor |
+| `hora_inicio` | `TIME` | - | - | Hora de inicio de la sesión |
+| `hora_fin` | `TIME` | - | - | Hora de fin de la sesión |
+| `dia_semana` | `INT(11)` | - | - | Día de la semana de dicha sesión |
+| `cod_grupo` | `VARCHAR(255)` | - | - | Código de grupo de la sesión |
+| `id_profesor` | `VARCHAR(255)` | - | - | Identificador del profesor de la sesión |
+
+### Clase Solicitud
+
+**Pendiente de completar.**
 
 ## 6.4. Relaciones y funcionamiento
 
