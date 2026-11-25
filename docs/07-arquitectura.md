@@ -2,12 +2,16 @@
 
 ## 7.1. Arquitectura de la aplicación
 
-- Tipo de arquitectura utilizada.
-- Componentes principales.
-- Comunicación entre componentes.
-- Diagrama de arquitectura.
+1. **Tipo de arquitectura:** arquitectura cliente-servidor, con una API REST como intermediaria.
+2. **Componentes principales:**
+    - Aplicación móvil y web (Flutter), utilizada por el profesorado.
+    - Aplicación de escritorio (C# y WPF), utilizada por dirección y gestión.
+    - API REST (Java y Spring Boot), que procesa las peticiones y centraliza la lógica del servidor.
+    - Base de datos (MySQL), donde se almacena la información.
+3. **Comunicación:** las aplicaciones cliente envían peticiones HTTP a la API, que consulta o modifica la información de MySQL y devuelve las respuestas correspondientes.
+4. **Diagrama:** 
 
-*Ver 5.1.A*
+![Diagrama de la arquitectura del sistema](assets/cliente-servidor.png)
 
 ## 7.2. Lenguajes de programación
 
