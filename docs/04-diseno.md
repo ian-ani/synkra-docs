@@ -1,7 +1,5 @@
 # 4. Diseño de la solución
 
-Este apartado describirá cómo se organizará Synkra antes de su implementación.
-
 ## 4.1. Diseño general de la aplicación
 
 La solución propuesta estará formada por dos partes principales:

@@ -1,7 +1,5 @@
 # 5. Planificación y seguimiento
 
-Este apartado recogerá cómo se ha organizado el trabajo durante el desarrollo de Synkra.
-
 ## 5.1. Fases del proyecto
 
 **Pendiente de completar.**
