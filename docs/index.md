@@ -1,12 +1,12 @@
 # Synkra
 
-*Añadir imagen de la app aquí*
+![Banner de Synkra](assets/synkra_banner.png)
 
 Sistema para la solicitud y gestión de los días moscosos del profesorado.
 
 ----
 
-**Autores:** Iris Auñón Navarro, Raúl Romero NO SÉ DIMELO, Robert Petric
+**Autores:** Iris Auñón Navarro, Raúl Romero Pérez, Robert Cristian Petric Petric
 
 **Ciclo formativo:** 2º Desarrollo de Aplicaciones Multiplataforma (DAM)
 
