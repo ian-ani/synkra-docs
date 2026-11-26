@@ -142,4 +142,37 @@ Se documentará la estructura de las tablas de la base de datos, indicando para 
 
 ## 6.4. Relaciones y funcionamiento
 
-**Pendiente de completar.**
+```mermaid
+erDiagram
+    profesor {
+        int id PK
+    }
+
+    sesion_horario {
+        int id PK
+    }
+
+    moscoso_solicitudes {
+        int id PK
+        int id_profesor FK
+    }
+
+    grupos_alumnado {
+        string cod_grupo PK
+        int id_profesor FK
+    }
+
+    profesor ||--o{ sesion_horario : "imparte"
+    profesor ||--o{ moscoso_solicitudes : "solicita"
+    profesor ||--o{ grupos_alumnado : "tutorea"
+    sesion_horario }o--|| grupos_alumnado : "pertenece"
+```
+
+Las relaciones y cardinalidades son las siguientes:
+
+- **Tutorea:** un profesor tutorea a un grupo de alumnos (y un grupo tiene asignado un profesor tutor).
+- **Pertenece:** un grupo de alumnos cuenta con múltiples sesiones de horario a lo largo de su planificación, mientras que cada sesión de horario pertenece a un único grupo.
+- **Imparte:** un profesor imparte varias sesiones de horario.
+- **Solicita:** un profesor puede registrar varias solicitudes de días moscosos a lo largo del tiempo.
+
+Nota: se han incluido en el diagrama las claves primarias y ajenas.
