@@ -30,6 +30,8 @@ El equipo directivo también forma parte del profesorado, por lo que podrá real
 - Los usuarios no pueden acceder a operaciones o información a la que no hayan sido autorizados.
 - Los usuarios no autenticados no tienen acceso a ningún recurso de la API.
 
+Ver apartado [10. Seguridad](./10-seguridad.md#10-seguridad) para más información.
+
 ### 3.2.2. Rendimiento
 
 **Pendiente de determinar.**
