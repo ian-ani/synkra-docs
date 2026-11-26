@@ -6,7 +6,7 @@ Sistema para la solicitud y gestión de los días moscosos del profesorado.
 
 ----
 
-**Autores:** Iris Auñón Navarro, Raúl Romero Pérez, Robert Cristian Petric Petric
+**Autores:** [Iris Auñón Navarro](https://github.com/ian-ani), [Raúl Romero Pérez](https://github.com/Mokey09), [Robert Cristian Petric Petric](https://github.com/RobertCriPet)
 
 **Ciclo formativo:** 2º Desarrollo de Aplicaciones Multiplataforma (DAM)
 
