@@ -44,4 +44,4 @@ Durante las pruebas de la aplicación se identificaron los siguientes errores y 
 
 - **Problemas de conexión durante las pruebas en un dispositivo móvil físico:** no fue posible iniciar sesión desde la aplicación móvil debido a que el servicio todavía no se ha desplegado en un entorno accesible desde el dispositivo. Por este motivo, el móvil no puede establecer la conexión necesaria con el servidor durante las pruebas.
 
-**Nota:** Los errores descritos corresponden a los problemas identificados durante las pruebas realizadas hasta el momento. No se descarta la existencia de otros errores o comportamientos inesperados que todavía no hayan sido detectados y que puedan aparecer durante futuras pruebas o con el uso de la aplicación.
+*Nota:* Los errores descritos corresponden a los problemas identificados durante las pruebas realizadas hasta el momento. No se descarta la existencia de otros errores o comportamientos inesperados que todavía no hayan sido detectados y que puedan aparecer durante futuras pruebas o con el uso de la aplicación.*

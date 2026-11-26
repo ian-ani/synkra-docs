@@ -175,4 +175,4 @@ Las relaciones y cardinalidades son las siguientes:
 - **Imparte:** un profesor imparte varias sesiones de horario.
 - **Solicita:** un profesor puede registrar varias solicitudes de días moscosos a lo largo del tiempo.
 
-Nota: se han incluido en el diagrama las claves primarias y ajenas.
+*Nota: se han incluido en el diagrama las claves primarias y ajenas.*
