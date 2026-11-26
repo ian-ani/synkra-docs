@@ -86,28 +86,28 @@ Se documentará la estructura de las tablas de la base de datos, indicando para 
 - Clave primaria y claves ajenas, cuando corresponda.
 - Restricciones aplicables.
 
-### Clase BloqueoCalendario
+### Tabla `bloqueo_calendario`
 
 | Campo | Tipo | PK/FK | Restricciones | Descripción |
 |-------|------|-------|---------------|-------------|
-| `id` | `INT` | PK | `NOT NULL`, autoincremental | Identificador único de bloqueo |
+| `id` | `INT` | PK | `NOT NULL`, `AUTO_INCREMENT` | Identificador único de bloqueo |
 | `fecha` | `DATE` | - | `UNIQUE`, `NOT NULL` | Día exacto bloqueado en el calendario |
 | `comentario` | `VARCHAR(255)` | - | Tamaño máximo de 255 caracteres | Comentario o razón del día bloqueado |
 | `tipo` | `ENUM` | - | - | Categoría del bloqueo (festivo, vacaciones, etc.). |
 
-### Clase GrupoAlumnado
+### Tabla `grupo_alumnado`
 
 | Campo | Tipo | PK/FK | Restricciones | Descripción |
 |-------|------|-------|---------------|-------------|
-| `cod_grupo` | `INT` | PK | `NOT NULL`, autoincremental | Identificador único del grupo de alumnado |
+| `cod_grupo` | `INT` | PK | `NOT NULL`, `AUTO_INCREMENT` | Identificador único del grupo de alumnado |
 | `id_profesor` | `INT` | FK | - | Identificador único del profesor |
 | `nombre_grupo` | `VARCHAR(255)` | - | - | Nombre del grupo |
 
-### Clase Profesor
+### Tabla `profesores`
 
 | Campo | Tipo | PK/FK | Restricciones | Descripción |
 |-------|------|-------|---------------|-------------|
-| `id` | `INT(11)` | PK | `NOT NULL`, autoincremental | Identificador único del grupo de alumnado |
+| `id` | `INT(11)` | PK | `NOT NULL`, `AUTO_INCREMENT` | Identificador único del grupo de alumnado |
 | `nombre` | `VARCHAR(255)` | - | - | Nombre del profesor |
 | `apellidos` | `VARCHAR(255)` | - | - | Apellidos del profesor |
 | `dni` | `VARCHAR(255)` | - | `UNIQUE` | Documento que identifica al profesor |
@@ -121,19 +121,22 @@ Se documentará la estructura de las tablas de la base de datos, indicando para 
 | `rol` | `ENUM` | - | `NOT NULL` | Rol dentro de la aplicación, determina sus permisos |
 | `especialidad` | `VARCHAR(255)` | - | - | Especialidad del profesor |
 | `departamento` | `VARCHAR(255)` | - | - | Departamento al que pertenece el profesor |
+| `grupoAlumnado_cod_grupo` | `INT(11)` | FK | - | Código de grupo referenciando a `grupo_alumnado` |
 
-### Clase SesionHorario
+### Tabla `horarios`
 
 | Campo | Tipo | PK/FK | Restricciones | Descripción |
 |-------|------|-------|---------------|-------------|
-| `id` | `INT(11)` | PK | `NOT NULL`, autoincremental | Identificador único de la sesión del profesor |
+| `id` | `INT(11)` | PK | `NOT NULL`, `AUTO_INCREMENT` | Identificador único de la sesión del profesor |
 | `hora_inicio` | `TIME` | - | - | Hora de inicio de la sesión |
 | `hora_fin` | `TIME` | - | - | Hora de fin de la sesión |
 | `dia_semana` | `INT(11)` | - | - | Día de la semana de dicha sesión |
 | `cod_grupo` | `VARCHAR(255)` | - | - | Código de grupo de la sesión |
 | `id_profesor` | `VARCHAR(255)` | - | - | Identificador del profesor de la sesión |
+| `grupoAlumnado_cod_grupo` | `INT(11)` | FK | - | Código de grupo referenciando a `grupo_alumnado` |
+| `profesor_id` | `INT(11)` | FK | - | Identificador del profesor |
 
-### Clase Solicitud
+### Tabla `solicitudes`
 
 **Pendiente de completar.**
 
