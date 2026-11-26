@@ -9,7 +9,138 @@
 
 ## 8.2. Estructura del proyecto
 
-- Árbol de carpetas y archivos.
+Para garantizar una correcta separación de responsabilidades, cada uno de los módulos de Synkra se organiza de forma independiente siguiendo los patrones arquitectónicos propios de cada tecnología (Spring Boot para el backend, C# / .NET para el escritorio y Flutter para el cliente multiplataforma).
+
+A continuación, se detalla la estructura de directorios y archivos clave de cada subsistema:
+
+### 8.2.1. API (Backend - Spring Boot / Java)
+
+Estructura organizada en capas bajo el paquete principal de la aplicación:
+
+```console
+\---api
+    |   ApiApplication.java
+    |
+    +---config
+    |       DataInitializer.java
+    |       OpenApiConfig.java
+    |
+    +---controller
+    |       AuthController.java
+    |       BloqueCalendarioController.java
+    |       GrupoAlumnadoController.java
+    |       ProfesorController.java
+    |       SesionHorarioController.java
+    |
+    +---domain
+    |       BloqueoCalendario.java
+    |       GrupoAlumnado.java
+    |       Profesor.java
+    |       SesionHorario.java
+    |       Solicitud.java
+    |
+    +---enums
+    |       Estado.java
+    |       Rol.java
+    |       Tipo.java
+    |
+    +---exception
+    +---repository
+    |       BloqueoCalendarioRepository.java
+    |       GrupoAlumnadoRepository.java
+    |       ProfesorRepository.java
+    |       SesionHorarioRepository.java
+    |
+    +---security
+    |       JwtAuthFilter.java
+    |       JwtService.java
+    |       ProfesorUserDetailsService.java
+    |       SecurityConfig.java
+    |
+    \---service
+            BloqueoCalendarioService.java
+            BloqueoCalendarioServiceImpl.java
+            GrupoAlumnadoService.java
+            GrupoAlumnadoServiceImpl.java
+            ProfesorService.java
+            ProfesorServiceImpl.java
+            SesionHorarioService.java
+            SesionHorarioServiceImpl.java
+```
+
+### 8.2.2. Programa de escritorio (C# / .NET)
+
+```console
+...
+|
++---bin
+|
++---Converters
+|       Converters.cs
+|
++---Models
+|       DiaCalendario.cs
+|       TipoDia.cs
+|
++---obj
+|
++---Services
+|       ApiClient.cs
+|       ApiExceptions.cs
+|       AuthService.cs
+|       SesionUsuario.cs
+|
++---ViewModels
+|       MainViewModel.cs
+|
+\---Views
+        LoginView.xaml
+        LoginView.xaml.cs
+        ProfesoresView.xaml
+        ProfesoresView.xaml.cs
+```
+
+### 8.2.3. Aplicación móvil y web (Flutter)
+
+Estructura modular orientada a pantallas, servicios y componentes reutilizables:
+
+```console
+...
+|
+|   main.dart
+|
++---models
+|       bloqueo.dart
+|       profesor.dart
+|       sesion_horario.dart
+|
++---pages
+|       auth_gate.dart
+|       calendar_screen.dart
+|       home_screen.dart
+|       login_screen.dart
+|       school_info_screen.dart
+|       sesion_horario.dart
+|       solicitud_calendar_screen.dart
+|       solicitud_screen.dart
+|       user_screen.dart
+|
++---services
+|       api_client.dart
+|       api_config.dart
+|       auth_service.dart
+|       token_storage.dart
+|
++---utils
+|       utils.dart
+|
+\---widget
+        horario_semanal.dart
+        nav_bar.dart
+        password_change_box.dart
+        password_widget.dart
+```
+
 - Explicación de la función de los archivos principales.
 - Organización del código fuente.
 
