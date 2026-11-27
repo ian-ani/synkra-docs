@@ -905,7 +905,7 @@
 <p>Synkra gestionará información relacionada con los profesores y sus solicitudes, por lo que será necesario proteger los datos almacenados y evitar accesos no autorizados.</p>
 <p>Durante el análisis inicial se ha identificado la necesidad de estudiar qué información debe protegerse y qué personas podrán acceder a ella.</p>
 <h2 id="101-sistema-de-autenticacion">10.1. Sistema de autenticación</h2>
-<p>La autenticación se implementa mediante <strong>Spring Security</strong> (en combinación con Spring Boot) para proteger los extremos de la API y restringir el acceso a determinadas operaciones. Asimismo, se emplea la librería <strong>JJWT</strong> para facilitar la gestión de sesiones de usuario y la autenticación basada en tokens.</p>
+<p>La autenticación se implementa mediante <strong>Spring Security</strong> (en combinación con Spring Boot) para proteger los extremos de la API y restringir el acceso a determinadas operaciones. Asimismo, se emplea la librería <strong><abbr title="Java JSON Web Token">JJWT</abbr></strong> para facilitar la gestión de sesiones de usuario y la autenticación basada en tokens.</p>
 <p>El acceso al sistema se realiza mediante <strong>correo electrónico</strong> y <strong>contraseña</strong>. Los usuarios no autenticados no podrán realizar ninguna operación en la aplicación, a excepción de intentar iniciar sesión.</p>
 <p>Para más detalles sobre los requisitos y la arquitectura, ver los apartados <a href="../03-analisis_requisitos/#321-seguridad">3.2.1 Seguridad</a> y <a href="../07-arquitectura/#733-api-java--spring-boot">7.3.3. API (Java / Spring Boot)</a>.</p>
 <h2 id="102-gestion-de-usuarios-y-contrasenas">10.2. Gestión de usuarios y contraseñas</h2>
@@ -948,7 +948,7 @@
 </tbody>
 </table>
 <h2 id="104-proteccion-frente-a-accesos-no-autorizados">10.4. Protección frente a accesos no autorizados</h2>
-<p>Cualquier usuario que pretenda acceder a un recurso protegido debe estar debidamente autenticado mediante sus credenciales (correo y contraseña), además de incluir un token JWT válido en las peticiones a la API.</p>
+<p>Cualquier usuario que pretenda acceder a un recurso protegido debe estar debidamente autenticado mediante sus credenciales (correo y contraseña), además de incluir un token <abbr title="JSON Web Token">JWT</abbr> válido en las peticiones a la API.</p>
 <h2 id="105-validacion-de-datos">10.5. Validación de datos</h2>
 <p>La validación y saneamiento de los datos de entrada se gestionan a nivel de backend mediante <strong>Spring Boot Validation</strong>, asegurando que la información recibida cumpla con las restricciones de formato e integridad antes de ser procesada.</p>
 <p>Ver apartado <a href="../07-arquitectura/#733-api-java--spring-boot">7.3.3. API (Java / Spring Boot)</a> para más información.</p>
@@ -956,7 +956,7 @@
 <p>Se garantiza que el acceso a los recursos esté estrictamente condicionado por el rol del usuario autenticado, denegando de forma automática cualquier intento de consulta por parte de entidades no autorizadas o usuarios sin sesión activa.</p>
 <h2 id="107-copias-de-seguridad">10.7. Copias de seguridad</h2>
 <p>Actualmente no se realizan copias de seguridad de los datos.</p>
-<h2 id="108-cumplimiento-de-la-normativa-de-proteccion-de-datos-aplicable-rgpd-y-lopdgdd-cuando-corresponda">10.8. Cumplimiento de la normativa de protección de datos aplicable (RGPD y LOPDGDD, cuando corresponda)</h2>
+<h2 id="108-cumplimiento-de-la-normativa-de-proteccion-de-datos-aplicable-rgpd-y-lopdgdd-cuando-corresponda">10.8. Cumplimiento de la normativa de protección de datos aplicable (<abbr title="Reglamento General de Protección de Datos">RGPD</abbr> y <abbr title="Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales">LOPDGDD</abbr>, cuando corresponda)</h2>
 <p><strong>Pendiente de análisis e implementación</strong> cuando corresponda según el despliegue final.</p>
 
 

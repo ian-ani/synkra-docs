@@ -1024,6 +1024,9 @@
 <h2 id="82-estructura-del-proyecto">8.2. Estructura del proyecto</h2>
 <p>Para garantizar una correcta separación de responsabilidades y facilitar el mantenimiento, cada uno de los módulos de <strong>Synkra</strong> se organiza de forma independiente siguiendo los patrones arquitectónicos propios de su tecnología.</p>
 <h3 id="821-api-spring-boot-java">8.2.1. API (Spring Boot / Java)</h3>
+<details>
+  <summary>Clic para ver</summary>
+
 <div class="highlight"><pre><span></span><code><span class="go">api/</span>
 <span class="go">├── ApiApplication.java   # Entrypoint de la API</span>
 <span class="go">├── config/</span>
@@ -1066,8 +1069,13 @@
 <span class="go">    ├── SesionHorarioService.java</span>
 <span class="go">    └── SesionHorarioServiceImpl.java</span>
 </code></pre></div>
+</details>
+
 <p><em>Nota: Este módulo sigue un diseño en capas tradicional de Spring Boot, separando claramente los controladores REST, la lógica de negocio (servicios), el acceso a datos (repositorios) y las entidades de dominio.</em></p>
 <h3 id="822-escritorio-c-net">8.2.2. Escritorio (C# / .NET)</h3>
+<details>
+  <summary>Clic para ver</summary>
+
 <div class="highlight"><pre><span></span><code><span class="go">desktop/</span>
 <span class="go">├── Converters/</span>
 <span class="go">│   └── Converters.cs  # Conversores y formateos</span>
@@ -1089,8 +1097,13 @@
 <span class="go">    ├── ProfesoresView.xaml  # Diseño del listado de profesores</span>
 <span class="go">    └── ProfesoresView.xaml.cs  # Lógica del listado de profesores</span>
 </code></pre></div>
-<p><em>Nota: El desarrollo de escritorio se apoya en el patrón <a href="https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93modelo_de_vista">MVVM</a>, desacoplando la interfaz de usuario (Views) de la lógica de presentación (ViewModels) y la gestión de datos.</em></p>
+</details>
+
+<p><em>Nota: El desarrollo de escritorio se apoya en el patrón <abbr title="Model–View–ViewModel">MVVM</abbr>, desacoplando la interfaz de usuario (Views) de la lógica de presentación (ViewModels) y la gestión de datos.</em></p>
 <h3 id="823-movil-y-web-flutter">8.2.3. Móvil y web (Flutter)</h3>
+<details>
+  <summary>Clic para ver</summary>
+
 <div class="highlight"><pre><span></span><code><span class="go">mobile/</span>
 <span class="go">├── main.dart  # Definición de tema e idioma, entrypoint de la app</span>
 <span class="go">├── models/</span>
@@ -1119,6 +1132,8 @@
 <span class="go">    ├── password_change_box.dart  # Caja para el cambio de contraseña (perfil)</span>
 <span class="go">    └── password_widget.dart  # Diseño del input de contraseña</span>
 </code></pre></div>
+</details>
+
 <p><em>Nota: La estructura de Flutter agrupa los componentes de forma modular por responsabilidades (pages, services, models y widgets), facilitando la reutilización de código entre la versión móvil y web.</em></p>
 <h2 id="83-implementacion-de-las-funcionalidades">8.3. Implementación de las funcionalidades</h2>
 <p>Para cada funcionalidad importante:</p>

@@ -1004,15 +1004,15 @@
 <h1 id="7-arquitectura-y-tecnologias">7. Arquitectura y tecnologías</h1>
 <h2 id="71-arquitectura-de-la-aplicacion">7.1. Arquitectura de la aplicación</h2>
 <ol>
-<li><strong>Tipo de arquitectura:</strong> arquitectura cliente-servidor, con una API REST como intermediaria.</li>
+<li><strong>Tipo de arquitectura:</strong> arquitectura cliente-servidor, con una <abbr title="Application Programming Interface">API</abbr> <abbr title="Representational State Transfer">REST</abbr> como intermediaria.</li>
 <li><strong>Componentes principales:</strong><ul>
 <li>Aplicación móvil y web (Flutter), utilizada por el profesorado.</li>
-<li>Aplicación de escritorio (C# y WPF), utilizada por dirección y gestión.</li>
+<li>Aplicación de escritorio (C# y <abbr title="Windows Presentation Foundation">WPF</abbr>), utilizada por dirección y gestión.</li>
 <li>API REST (Java y Spring Boot), que procesa las peticiones y centraliza la lógica del servidor.</li>
 <li>Base de datos (MySQL), donde se almacena la información.</li>
 </ul>
 </li>
-<li><strong>Comunicación:</strong> las aplicaciones cliente envían peticiones HTTP a la API, que consulta o modifica la información de MySQL y devuelve las respuestas correspondientes.</li>
+<li><strong>Comunicación:</strong> las aplicaciones cliente envían peticiones <abbr title="Hypertext Transfer Protocol">HTTP</abbr> a la API, que consulta o modifica la información de MySQL y devuelve las respuestas correspondientes.</li>
 <li><strong>Diagrama:</strong> </li>
 </ol>
 <p><img alt="Diagrama de la arquitectura del sistema" src="../assets/cliente-servidor.png" /></p>
@@ -1071,7 +1071,7 @@
 <ul>
 <li><strong>Lenguaje de programación:</strong> Dart.</li>
 <li><strong>Framework:</strong> Flutter.</li>
-<li><strong>Versión del SDK de Dart:</strong> 3.13.7 o superior.</li>
+<li><strong>Versión del <abbr title="Software Development Kit">SDK</abbr> de Dart:</strong> 3.13.7 o superior.</li>
 <li><strong>Gestor de dependencias:</strong> Pub.</li>
 <li><strong>Versión de la aplicación:</strong> 1.0.0.</li>
 <li><strong>Plataformas de destino:</strong> Android y web, entre otras plataformas compatibles con Flutter.</li>
@@ -1162,13 +1162,13 @@
 <td>Permite proteger los endpoints de la API y restringir el acceso a determinadas operaciones</td>
 </tr>
 <tr>
-<td><strong>JJWT</strong></td>
+<td><strong><abbr title="Java JSON Web Token">JJWT</abbr></strong></td>
 <td>0.12.6</td>
 <td>Permite generar y validar tokens JWT para gestionar la autenticación mediante tokens</td>
 <td>Facilita la autenticación de los usuarios y el mantenimiento de sus sesiones mediante tokens</td>
 </tr>
 <tr>
-<td><strong>Spring Data JPA</strong></td>
+<td><strong>Spring Data <abbr title="Java Persistence API, actualmente Jakarta Persistence">JPA</abbr></strong></td>
 <td>Gestionada por Spring Boot 4.1.1</td>
 <td>Facilita la comunicación con la base de datos y la gestión de las entidades y consultas</td>
 <td>Reduce la necesidad de escribir y consultar SQL manualmente</td>
@@ -1186,7 +1186,7 @@
 <td>Ayuda a evitar que se procesen datos incorrectos o que no cumplan las restricciones establecidas</td>
 </tr>
 <tr>
-<td><strong>Spring Web MVC</strong></td>
+<td><strong>Spring Web <abbr title="Model-View-Controller">MVC</abbr></strong></td>
 <td>Gestionada por Spring Boot 4.1.1</td>
 <td>Permite crear los controladores y endpoints HTTP de la API</td>
 <td>Facilita la comunicación entre las aplicaciones clientes y el servidor</td>
@@ -1269,11 +1269,7 @@
 <td>Herramienta utilizada para diseñar y representar el diagrama entidad-relación de la base de datos</td>
 </tr>
 <tr>
-<td><strong>Herramienta de diseño de mockups</strong></td>
-<td>-</td>
-</tr>
-<tr>
-<td>Drawio</td>
+<td><strong>Drawio</strong></td>
 <td>Para la creación de algunos diagramas de esta documentación</td>
 </tr>
 </tbody>
