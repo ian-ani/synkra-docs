@@ -1,0 +1,1417 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../06-modelo_datos/">
+      
+      
+        <link rel="next" href="../08-desarrollo/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/synkra_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Arquitectura - Synkra Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#7-arquitectura-y-tecnologias" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Synkra Docs" class="md-header__button md-logo" aria-label="Synkra Docs" data-md-component="logo">
+      
+  <img src="../assets/synkra_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Synkra Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Arquitectura
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="amber"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Synkra Docs" class="md-nav__button md-logo" aria-label="Synkra Docs" data-md-component="logo">
+      
+  <img src="../assets/synkra_logo.png" alt="logo">
+
+    </a>
+    Synkra Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-presentacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-caracterizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caracterización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-analisis_requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análisis de requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-diseno/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diseño de la solución
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-planificacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planificación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-modelo_datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-arquitectura-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1. Arquitectura de la aplicación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-lenguajes-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2. Lenguajes de programación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-frameworks-y-librerias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3. Frameworks y librerías
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3. Frameworks y librerías">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731-programa-de-escritorio-c-net-wpf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.1. Programa de escritorio (C# / .NET / WPF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732-aplicacion-de-escritorio-dart-flutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.2. Aplicación de escritorio (Dart / Flutter)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#733-api-java-spring-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.3. API (Java / Spring Boot)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-herramientas-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4. Herramientas de desarrollo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4. Herramientas de desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entornos-de-desarrollo-ides-y-editores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entornos de desarrollo (IDEs) y editores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de versiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-de-diseno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herramientas de diseño
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bases de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-justificacion-tecnologica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5. Justificación tecnológica
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-desarrollo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desarrollo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-pruebas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pruebas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-seguridad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-despliegue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Despliegue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manuales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-conclusiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conclusiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-arquitectura-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1. Arquitectura de la aplicación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-lenguajes-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2. Lenguajes de programación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-frameworks-y-librerias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3. Frameworks y librerías
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3. Frameworks y librerías">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731-programa-de-escritorio-c-net-wpf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.1. Programa de escritorio (C# / .NET / WPF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732-aplicacion-de-escritorio-dart-flutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.2. Aplicación de escritorio (Dart / Flutter)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#733-api-java-spring-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3.3. API (Java / Spring Boot)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-herramientas-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4. Herramientas de desarrollo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4. Herramientas de desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entornos-de-desarrollo-ides-y-editores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entornos de desarrollo (IDEs) y editores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de versiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-de-diseno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herramientas de diseño
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bases de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-justificacion-tecnologica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5. Justificación tecnológica
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="7-arquitectura-y-tecnologias">7. Arquitectura y tecnologías</h1>
+<h2 id="71-arquitectura-de-la-aplicacion">7.1. Arquitectura de la aplicación</h2>
+<ol>
+<li><strong>Tipo de arquitectura:</strong> arquitectura cliente-servidor, con una API REST como intermediaria.</li>
+<li><strong>Componentes principales:</strong><ul>
+<li>Aplicación móvil y web (Flutter), utilizada por el profesorado.</li>
+<li>Aplicación de escritorio (C# y WPF), utilizada por dirección y gestión.</li>
+<li>API REST (Java y Spring Boot), que procesa las peticiones y centraliza la lógica del servidor.</li>
+<li>Base de datos (MySQL), donde se almacena la información.</li>
+</ul>
+</li>
+<li><strong>Comunicación:</strong> las aplicaciones cliente envían peticiones HTTP a la API, que consulta o modifica la información de MySQL y devuelve las respuestas correspondientes.</li>
+<li><strong>Diagrama:</strong> </li>
+</ol>
+<p><img alt="Diagrama de la arquitectura del sistema" src="../assets/cliente-servidor.png" /></p>
+<h2 id="72-lenguajes-de-programacion">7.2. Lenguajes de programación</h2>
+<p>Para el desarrollo de Synkra se han utilizado diferentes lenguajes y tecnologías, cada uno destinado a una parte específica del sistema:</p>
+<ul>
+<li>
+<p><strong>C# con .NET y WPF:</strong> se utiliza para desarrollar la aplicación de escritorio destinada al equipo directivo y gestor. Esta aplicación permite gestionar las solicitudes de días moscosos, administrar los calendarios y configurar los bloqueos de fechas.</p>
+</li>
+<li>
+<p><strong>Dart con Flutter:</strong> se utiliza para desarrollar la aplicación móvil y web destinada principalmente al profesorado. A través de ella, los usuarios pueden consultar su disponibilidad, solicitar días moscosos y realizar el seguimiento de sus solicitudes.</p>
+</li>
+<li>
+<p><strong>Java con Spring Boot:</strong> se utiliza para desarrollar la API que actúa como intermediaria entre las aplicaciones cliente y la base de datos. Esta API centraliza el acceso a la información y permite que tanto la aplicación de escritorio como la aplicación móvil y web puedan consultar y modificar los datos necesarios.</p>
+</li>
+</ul>
+<p>De esta manera, las distintas aplicaciones se comunican con la base de datos a través de una API común, evitando que tengan que acceder directamente a ella.</p>
+<h2 id="73-frameworks-y-librerias">7.3. Frameworks y librerías</h2>
+<p>En este apartado se describen los principales frameworks y librerías utilizados durante el desarrollo de Synkra, indicando su versión, finalidad y motivo de elección.</p>
+<h3 id="731-programa-de-escritorio-c-net-wpf">7.3.1. Programa de escritorio (C# / .NET / WPF)</h3>
+<p>La configuración principal del proyecto es la siguiente:</p>
+<ul>
+<li><strong>Lenguaje de programación:</strong> C# 12.</li>
+<li><strong>Framework:</strong> .NET 8.</li>
+<li><strong>Tecnología de interfaz gráfica:</strong> Windows Presentation Foundation (WPF).</li>
+<li>Gestor de dependencias: NuGet.</li>
+<li><strong>Sistema operativo de destino:</strong> Windows.</li>
+</ul>
+<p>A continuación, se describen las principales tecnologías utilizadas:</p>
+<table>
+<thead>
+<tr>
+<th>Framework o tecnología</th>
+<th>Versión</th>
+<th>Función</th>
+<th>Motivo de elección</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>.NET</strong></td>
+<td>8</td>
+<td>Plataforma de desarrollo y ejecución del programa de escritorio</td>
+<td>Proporciona el entorno y las herramientas necesarias para desarrollar programas para Windows</td>
+</tr>
+<tr>
+<td><strong>WPF</strong></td>
+<td>-</td>
+<td>Tecnología utilizada para crear la interfaz gráfica de escritorio</td>
+<td>Permite diseñar interfaces gráficas fácilmente y personalizadas, y ofrece mayores posibilidades de personalización visual que Windows Forms</td>
+</tr>
+</tbody>
+</table>
+<h3 id="732-aplicacion-de-escritorio-dart-flutter">7.3.2. Aplicación de escritorio (Dart / Flutter)</h3>
+<p>La configuración principal del proyecto es la siguiente:</p>
+<ul>
+<li><strong>Lenguaje de programación:</strong> Dart.</li>
+<li><strong>Framework:</strong> Flutter.</li>
+<li><strong>Versión del SDK de Dart:</strong> 3.13.7 o superior.</li>
+<li><strong>Gestor de dependencias:</strong> Pub.</li>
+<li><strong>Versión de la aplicación:</strong> 1.0.0.</li>
+<li><strong>Plataformas de destino:</strong> Android y web, entre otras plataformas compatibles con Flutter.</li>
+</ul>
+<p>A continuación, se describen las principales dependencias utilizadas:</p>
+<table>
+<thead>
+<tr>
+<th>Framework o librería</th>
+<th>Versión</th>
+<th>Función</th>
+<th>Motivo de elección</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Flutter</strong></td>
+<td>-</td>
+<td>Framework principal utilizado para desarrollar la aplicación móvil y web</td>
+<td>Permite desarrollar aplicaciones para distintas plataformas a partir de una misma base de código</td>
+</tr>
+<tr>
+<td><strong>Cupertino Icons</strong></td>
+<td>^2.0.0</td>
+<td>Proporciona un conjunto de iconos con el estilo visual de las interfaces de Apple</td>
+<td>Amplía las opciones de iconografía disponibles en la aplicación</td>
+</tr>
+<tr>
+<td><strong>Flutter Native Splash</strong></td>
+<td>^2.4.8</td>
+<td>Permite configurar la pantalla de inicio que aparece mientras se carga la aplicación</td>
+<td>Facilita la personalización de la pantalla de carga y la incorporación de la identidad visual de Synkra</td>
+</tr>
+<tr>
+<td><strong>Table Calendar</strong></td>
+<td>^3.3.0</td>
+<td>Proporciona un calendario interactivo para mostrar y seleccionar fechas</td>
+<td>Facilita la visualización de los días del calendario y la selección de fechas para las solicitudes</td>
+</tr>
+<tr>
+<td><strong>Intl</strong></td>
+<td>^0.20.2</td>
+<td>Permite trabajar con formatos de fechas, horas y otros datos internacionales</td>
+<td>Facilita la adaptación de fechas y formatos a la configuración regional utilizada</td>
+</tr>
+<tr>
+<td><strong>HTTP</strong></td>
+<td>^1.2.2</td>
+<td>Permite realizar peticiones HTTP a la API desarrollada con Spring Boot</td>
+<td>Es necesario para la comunicación entre la aplicación y el servidor</td>
+</tr>
+<tr>
+<td><strong>Shared Preferences</strong></td>
+<td>^2.3.2</td>
+<td>Permite almacenar pequeños datos de configuración de forma persistente en el dispositivo</td>
+<td>Facilita la conservación de determinadas preferencias y datos locales de la aplicación</td>
+</tr>
+</tbody>
+</table>
+<h3 id="733-api-java-spring-boot">7.3.3. API (Java / Spring Boot)</h3>
+<p>La configuración principal del proyecto es la siguiente:</p>
+<ul>
+<li><strong>Lenguaje de programación:</strong> Java 21.</li>
+<li><strong>Framework principal:</strong> Spring Boot 4.1.1.</li>
+<li><strong>Gestor de dependencias y construcción:</strong> Maven.</li>
+</ul>
+<p>A continuación, se detallan las principales dependencias utilizadas en el desarrollo de la API:</p>
+<table>
+<thead>
+<tr>
+<th>Framework o librería</th>
+<th>Versión</th>
+<th>Función</th>
+<th>Motivo de elección</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Spring Boot</strong></td>
+<td>4.1.1</td>
+<td>Framework principal para desarrollar y ejecutar la API</td>
+<td>Facilita la creación de servicios web y la configuración del servidor, es un estándar en Java y hay una amplia documentación disponible</td>
+</tr>
+<tr>
+<td><strong>Spring Security</strong></td>
+<td>Gestionada por Spring Boot 4.1.1</td>
+<td>Gestiona la autenticación, la autorización y el control de acceso según los roles</td>
+<td>Permite proteger los endpoints de la API y restringir el acceso a determinadas operaciones</td>
+</tr>
+<tr>
+<td><strong>JJWT</strong></td>
+<td>0.12.6</td>
+<td>Permite generar y validar tokens JWT para gestionar la autenticación mediante tokens</td>
+<td>Facilita la autenticación de los usuarios y el mantenimiento de sus sesiones mediante tokens</td>
+</tr>
+<tr>
+<td><strong>Spring Data JPA</strong></td>
+<td>Gestionada por Spring Boot 4.1.1</td>
+<td>Facilita la comunicación con la base de datos y la gestión de las entidades y consultas</td>
+<td>Reduce la necesidad de escribir y consultar SQL manualmente</td>
+</tr>
+<tr>
+<td><strong>Hibernate</strong></td>
+<td>Gestionada por Spring Boot 4.1.1 a través de JPA</td>
+<td>Implementa el mapeo entre las entidades de Java y las tablas de la base de datos</td>
+<td>Permite trabajar con los datos mediante objetos Java</td>
+</tr>
+<tr>
+<td><strong>Spring Boot Validation</strong></td>
+<td>Gestionada por Spring Boot 4.1.1</td>
+<td>Permite validar los datos recibidos por la API</td>
+<td>Ayuda a evitar que se procesen datos incorrectos o que no cumplan las restricciones establecidas</td>
+</tr>
+<tr>
+<td><strong>Spring Web MVC</strong></td>
+<td>Gestionada por Spring Boot 4.1.1</td>
+<td>Permite crear los controladores y endpoints HTTP de la API</td>
+<td>Facilita la comunicación entre las aplicaciones clientes y el servidor</td>
+</tr>
+<tr>
+<td><strong>Springdoc OpenAPI</strong></td>
+<td>3.1.0</td>
+<td>Genera documentación de los endpoints de la API y permite consultarla mediante Swagger UI</td>
+<td>Facilita la consulta y las pruebas de los servicios disponibles</td>
+</tr>
+<tr>
+<td><strong>MySQL Connector/J</strong></td>
+<td>Gestionada por Spring Boot 4.1.1</td>
+<td>Permite establecer la conexión entre la aplicación Java y MySQL</td>
+<td>Es el controlador necesario para que Spring Boot pueda comunicarse con la base de datos</td>
+</tr>
+<tr>
+<td><strong>Lombok</strong></td>
+<td>Gestionada por Spring Boot 4.1.1</td>
+<td>Reduce código repetitivo (<em>boilerplate</em> en inglés) en las clases Java, como <em>getters</em>, <em>setters</em> y constructores</td>
+<td>Facilita el mantenimiento y mejora la legibilidad del código</td>
+</tr>
+</tbody>
+</table>
+<h2 id="74-herramientas-de-desarrollo">7.4. Herramientas de desarrollo</h2>
+<p>Durante el desarrollo de Synkra se han utilizado distintas herramientas para la programación de las aplicaciones, el diseño de la base de datos, el control de versiones, la gestión de la información y la elaboración de la documentación.</p>
+<h3 id="entornos-de-desarrollo-ides-y-editores">Entornos de desarrollo (IDEs) y editores</h3>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IntelliJ IDEA</strong></td>
+<td>Entorno de desarrollo utilizado para programar la API REST desarrollada con Java y Spring Boot</td>
+</tr>
+<tr>
+<td><strong>Visual Studio</strong></td>
+<td>Entorno de desarrollo utilizado para implementar la aplicación de escritorio con C# y WPF</td>
+</tr>
+<tr>
+<td><strong>Visual Studio Code</strong></td>
+<td>Editor utilizado para desarrollar la aplicación multiplataforma con Flutter y Dart; también se ha empleado para redactar y mantener la documentación del proyecto</td>
+</tr>
+<tr>
+<td><strong>Android Studio</strong></td>
+<td>Herramienta utilizada para configurar y gestionar emuladores de dispositivos Android; aunque la aplicación Flutter se ejecutaba desde Visual Studio Code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="control-de-versiones">Control de versiones</h3>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GitHub</strong></td>
+<td>Plataforma utilizada para alojar el repositorio del proyecto y gestionar el control de versiones del código fuente y documentación; también se utiliza GitHub Projects para organizar y realizar el seguimiento de las tareas mediante un tablero Kanban</td>
+</tr>
+</tbody>
+</table>
+<h3 id="herramientas-de-diseno">Herramientas de diseño</h3>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DrawSQL</strong></td>
+<td>Herramienta utilizada para diseñar y representar el diagrama entidad-relación de la base de datos</td>
+</tr>
+<tr>
+<td><strong>Herramienta de diseño de mockups</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Drawio</td>
+<td>Para la creación de algunos diagramas de esta documentación</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bases-de-datos">Bases de datos</h3>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MySQL</strong></td>
+<td>Sistema gestor de bases de datos relacional utilizado para almacenar y gestionar la información de Synkra</td>
+</tr>
+<tr>
+<td><strong>XAMPP</strong></td>
+<td>Entorno utilizado para proporcionar y gestionar el servicio local de MySQL durante el desarrollo</td>
+</tr>
+<tr>
+<td><strong>phpMyAdmin</strong></td>
+<td>Herramienta utilizada para administrar la base de datos MySQL mediante una interfaz web</td>
+</tr>
+</tbody>
+</table>
+<h3 id="documentacion">Documentación</h3>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Visual Studio Code</strong></td>
+<td>Editor utilizado para redactar y modificar los archivos de documentación en formato Markdown</td>
+</tr>
+<tr>
+<td><strong>MkDocs</strong></td>
+<td>Herramienta utilizada para generar el sitio web de la documentación del proyecto a partir de archivos Markdown</td>
+</tr>
+</tbody>
+</table>
+<h2 id="75-justificacion-tecnologica">7.5. Justificación tecnológica</h2>
+<p>La elección de las tecnologías utilizadas en Synkra se ha basado principalmente en los conocimientos previos del equipo, la disponibilidad de documentación y las necesidades del proyecto.</p>
+<ul>
+<li><strong>Java y Spring Boot:</strong> se han elegido por ser tecnologías consolidadas, contar con abundante documentación y porque el equipo ya tenía conocimientos previos de Java.</li>
+<li><strong>C# y .NET con WPF:</strong> se han seleccionado por su adecuación al desarrollo de aplicaciones de escritorio para Windows, su amplia documentación y las similitudes de C# con Java.</li>
+<li><strong>Dart y Flutter:</strong> se han elegido porque permiten desarrollar aplicaciones móviles y web a partir de una misma base de código, reduciendo la duplicación de trabajo.</li>
+<li><strong>MySQL:</strong> se ha seleccionado por ser un sistema relacional adecuado para organizar la información y las relaciones entre los distintos datos del proyecto.</li>
+<li><strong>GitHub:</strong> se utiliza para facilitar el trabajo colaborativo, mantener un historial de cambios y organizar el desarrollo del proyecto.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Mokey09/LilBrosTeam-Proyecto2DAM-desktop" target="_blank" rel="noopener" title="Código fuente en GitHub del programa de escritorio" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M348.8 32C340.7 46.1 336 62.5 336 80v16H64v224h272v64H64c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64zM336 432c0 17.5 4.7 33.9 12.8 48H120c-13.3 0-24-10.7-24-24s10.7-24 24-24zm96-400h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48h-96c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48m24 64c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24zm56 144a32 32 0 1 0-64 0 32 32 0 1 0 64 0"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/Mokey09/LilBrosTeam-Proyecto2DAM-mobile" target="_blank" rel="noopener" title="Código fuente en GitHub de la aplicación móvil" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M16 64C16 28.7 44.7 0 80 0h224c35.3 0 64 28.7 64 64v384c0 35.3-28.7 64-64 64H80c-35.3 0-64-28.7-64-64zm112 376c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-80c-13.3 0-24 10.7-24 24M304 64H80v304h224z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/Mokey09/LilBrosTeam-Proyecto2DAM-api" target="_blank" rel="noopener" title="Código fuente en GitHub de la API" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v64c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm216 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48m56 24a24 24 0 1 1 48 0 24 24 0 1 1-48 0M64 288c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64v-64c0-35.3-28.7-64-64-64zm216 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48m56 24a24 24 0 1 1 48 0 24 24 0 1 1-48 0"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>
