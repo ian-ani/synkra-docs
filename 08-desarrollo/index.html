@@ -601,10 +601,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dependencias-utilizadas" class="md-nav__link">
+  <a href="#851-dependencias-utilizadas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dependencias utilizadas
+        8.5.1. Dependencias utilizadas
       
     </span>
   </a>
@@ -612,10 +612,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#archivos-de-configuracion-de-dependencias" class="md-nav__link">
+  <a href="#852-archivos-de-configuracion-de-dependencias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Archivos de configuración de dependencias
+        8.5.2. Archivos de configuración de dependencias
       
     </span>
   </a>
@@ -640,10 +640,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#estructura-de-repositorios-e-historial-de-commits" class="md-nav__link">
+  <a href="#861-estructura-de-repositorios-e-historial-de-commits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estructura de repositorios e historial de commits
+        8.6.1. Estructura de repositorios e historial de commits
       
     </span>
   </a>
@@ -651,10 +651,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#control-de-versiones-y-gestion-de-ramas" class="md-nav__link">
+  <a href="#862-control-de-versiones-y-ramas-del-proyecto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Control de versiones y gestión de ramas
+        8.6.2. Control de versiones y ramas del proyecto
       
     </span>
   </a>
@@ -931,10 +931,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dependencias-utilizadas" class="md-nav__link">
+  <a href="#851-dependencias-utilizadas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dependencias utilizadas
+        8.5.1. Dependencias utilizadas
       
     </span>
   </a>
@@ -942,10 +942,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#archivos-de-configuracion-de-dependencias" class="md-nav__link">
+  <a href="#852-archivos-de-configuracion-de-dependencias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Archivos de configuración de dependencias
+        8.5.2. Archivos de configuración de dependencias
       
     </span>
   </a>
@@ -970,10 +970,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#estructura-de-repositorios-e-historial-de-commits" class="md-nav__link">
+  <a href="#861-estructura-de-repositorios-e-historial-de-commits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estructura de repositorios e historial de commits
+        8.6.1. Estructura de repositorios e historial de commits
       
     </span>
   </a>
@@ -981,10 +981,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#control-de-versiones-y-gestion-de-ramas" class="md-nav__link">
+  <a href="#862-control-de-versiones-y-ramas-del-proyecto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Control de versiones y gestión de ramas
+        8.6.2. Control de versiones y ramas del proyecto
       
     </span>
   </a>
@@ -1028,7 +1028,7 @@
 <span class="go">├── ApiApplication.java   # Entrypoint de la API</span>
 <span class="go">├── config/</span>
 <span class="go">│   ├── DataInitializer.java   # Crea un director</span>
-<span class="go">│   └── OpenApiConfig.java   # Token JJWT</span>
+<span class="go">│   └── OpenApiConfig.java   # Token JWT</span>
 <span class="go">├── controller/</span>
 <span class="go">│   ├── AuthController.java   # Controlador para el inicio de sesión</span>
 <span class="go">│   ├── BloqueCalendarioController.java   # Controlador para la gestión del bloqueo de calendario</span>
@@ -1066,6 +1066,7 @@
 <span class="go">    ├── SesionHorarioService.java</span>
 <span class="go">    └── SesionHorarioServiceImpl.java</span>
 </code></pre></div>
+<p><em>Nota: Este módulo sigue un diseño en capas tradicional de Spring Boot, separando claramente los controladores REST, la lógica de negocio (servicios), el acceso a datos (repositorios) y las entidades de dominio.</em></p>
 <h3 id="822-escritorio-c-net">8.2.2. Escritorio (C# / .NET)</h3>
 <div class="highlight"><pre><span></span><code><span class="go">desktop/</span>
 <span class="go">├── Converters/</span>
@@ -1088,6 +1089,7 @@
 <span class="go">    ├── ProfesoresView.xaml  # Diseño del listado de profesores</span>
 <span class="go">    └── ProfesoresView.xaml.cs  # Lógica del listado de profesores</span>
 </code></pre></div>
+<p><em>Nota: El desarrollo de escritorio se apoya en el patrón <a href="https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93modelo_de_vista">MVVM</a>, desacoplando la interfaz de usuario (Views) de la lógica de presentación (ViewModels) y la gestión de datos.</em></p>
 <h3 id="823-movil-y-web-flutter">8.2.3. Móvil y web (Flutter)</h3>
 <div class="highlight"><pre><span></span><code><span class="go">mobile/</span>
 <span class="go">├── main.dart  # Definición de tema e idioma, entrypoint de la app</span>
@@ -1096,19 +1098,18 @@
 <span class="go">│   ├── profesor.dart  # Entidad profesores</span>
 <span class="go">│   └── sesion_horario.dart  # Entidad horarios</span>
 <span class="go">├── pages/</span>
-<span class="go">│   ├── auth_gate.dart</span>
-<span class="go">│   ├── calendar_screen.dart</span>
-<span class="go">│   ├── home_screen.dart</span>
-<span class="go">│   ├── login_screen.dart</span>
-<span class="go">│   ├── school_info_screen.dart</span>
-<span class="go">│   ├── sesion_horario.dart</span>
-<span class="go">│   ├── solicitud_calendar_screen.dart</span>
-<span class="go">│   ├── solicitud_screen.dart</span>
-<span class="go">│   └── user_screen.dart</span>
+<span class="go">│   ├── auth_gate.dart  # Comprueba el token guardado contra la API, direcciona a Home o login</span>
+<span class="go">│   ├── calendar_screen.dart  # Pantalla de calendario escolar</span>
+<span class="go">│   ├── home_screen.dart  # Pantalla principal de la aplicación (una vez el usuario ha logueado)</span>
+<span class="go">│   ├── login_screen.dart  # Pantalla de inicio de sesión</span>
+<span class="go">│   ├── school_info_screen.dart  # Pantalla con información del centro escolar</span>
+<span class="go">│   ├── solicitud_calendar_screen.dart  # Pantalla de calendario que permite solicitar días moscosos</span>
+<span class="go">│   ├── solicitud_screen.dart  # Base para la pantalla de solicitud, está sin empezar</span>
+<span class="go">│   └── user_screen.dart  # Pantalla con informacion del usuario: nombre, sesiones, etc</span>
 <span class="go">├── services/</span>
 <span class="go">│   ├── api_client.dart  # Inicio de sesión y endpoints para peticiones a la API</span>
 <span class="go">│   ├── api_config.dart  # Configuración de la API (dirección, puerto)</span>
-<span class="go">│   ├── auth_service.dart  # Inicio y cierre de sesión</span>
+<span class="go">│   ├── auth_service.dart  # Inicio y cierre de sesión </span>
 <span class="go">│   └── token_storage.dart  # Guarda el token JWT</span>
 <span class="go">├── utils/</span>
 <span class="go">│   └── utils.dart  # Datos de prueba para el calendario</span>
@@ -1118,6 +1119,7 @@
 <span class="go">    ├── password_change_box.dart  # Caja para el cambio de contraseña (perfil)</span>
 <span class="go">    └── password_widget.dart  # Diseño del input de contraseña</span>
 </code></pre></div>
+<p><em>Nota: La estructura de Flutter agrupa los componentes de forma modular por responsabilidades (pages, services, models y widgets), facilitando la reutilización de código entre la versión móvil y web.</em></p>
 <h2 id="83-implementacion-de-las-funcionalidades">8.3. Implementación de las funcionalidades</h2>
 <p>Para cada funcionalidad importante:</p>
 <ul>
@@ -1135,9 +1137,9 @@
 <li>Gestión de errores y excepciones, cuando proceda.</li>
 </ul>
 <h2 id="85-librerias-y-dependencias">8.5. Librerías y dependencias</h2>
-<h3 id="dependencias-utilizadas">Dependencias utilizadas</h3>
+<h3 id="851-dependencias-utilizadas">8.5.1. Dependencias utilizadas</h3>
 <p>El detalle completo de las librerías empleadas en cada uno de los módulos del ecosistema Synkra (API, programa de escritorio y aplicación móvil/web), junto con sus respectivas versiones, funciones y justificación técnica, se encuentra recogido en el apartado <a href="../07-arquitectura/#73-frameworks-y-librerías">7.3. Frameworks y librerías</a>.</p>
-<h3 id="archivos-de-configuracion-de-dependencias">Archivos de configuración de dependencias</h3>
+<h3 id="852-archivos-de-configuracion-de-dependencias">8.5.2. Archivos de configuración de dependencias</h3>
 <p>La gestión y declaración de las dependencias de cada subsistema se realiza a través de los correspondientes archivos de configuración de sus gestores de paquetes:</p>
 <ul>
 <li><strong>API (Backend - Spring Boot):</strong> Las dependencias se encuentran declaradas en el archivo <code>pom.xml</code>, dentro del bloque <code>&lt;dependencies&gt;</code>, gestionadas mediante <strong>Maven</strong>.</li>
@@ -1145,7 +1147,7 @@
 <li><strong>Aplicación web y móvil (Flutter):</strong> Las dependencias de terceros se especifican en el archivo <code>pubspec.yaml</code>, bajo la sección correspondiente de <code>dependencies</code>.</li>
 </ul>
 <h2 id="86-repositorio-del-proyecto">8.6. Repositorio del proyecto</h2>
-<h3 id="estructura-de-repositorios-e-historial-de-commits">Estructura de repositorios e historial de <em>commits</em></h3>
+<h3 id="861-estructura-de-repositorios-e-historial-de-commits">8.6.1. Estructura de repositorios e historial de <em>commits</em></h3>
 <p>Con el fin de mantener una correcta separación de responsabilidades y modularidad en el desarrollo, el código fuente del proyecto se ha distribuido en cuatro repositorios independientes (tres correspondientes a los distintos módulos del sistema y uno exclusivo para la documentación):</p>
 <table>
 <thead>
@@ -1184,9 +1186,15 @@
 </tbody>
 </table>
 <p>Adicionalmente, se puede acceder de forma directa a los repositorios principales (escritorio, móvil y API) desde los accesos directos ubicados en la esquina inferior derecha de la interfaz de la documentación web.</p>
-<h3 id="control-de-versiones-y-gestion-de-ramas">Control de versiones y gestión de ramas</h3>
-<p>A continuación, se muestra el flujo de trabajo y el estado de las ramas visualizado a través del cliente <strong>SourceTree</strong>:</p>
-<p><strong>Añadir imágenes del SourceTree.</strong></p>
+<h3 id="862-control-de-versiones-y-ramas-del-proyecto">8.6.2. Control de versiones y ramas del proyecto</h3>
+<p>Para el desarrollo de Synkra se ha seguido una estrategia de ramificación basada en características, lo que permite aislar el desarrollo de cada funcionalidad antes de unificarla en el código común. </p>
+<p>Las ramas de trabajo principales son las siguientes:</p>
+<ul>
+<li><strong><code>main</code></strong>: Rama principal que contiene las versiones estables y definitivas para la entrega de los hitos del proyecto.</li>
+<li><strong><code>develop</code></strong>: Rama de integración donde se unifican de forma continua las distintas tareas y módulos desarrollados por el equipo.</li>
+<li><strong>Ramas de características (<em>feature</em>)</strong>: Empleadas de forma temporal para el desarrollo modular de componentes específicos (como <code>calendarScreen</code>, <code>conectar-api</code>, <code>LoginScreen</code>, <code>solicitud-moscosos</code>, <code>tema-oscuro</code>, entre otras).</li>
+</ul>
+<p>Para consultar el estado actualizado, el grafo de commits o la evolución en tiempo real de estas ramas, se puede emplear cualquier cliente de control de versiones como <strong>SourceTree</strong>, revisar directamente los repositorios en el <strong>tablero de GitHub</strong> (ver apartado anterior), o utilizar los comandos nativos de Git (por ejemplo, <code>git branch -a</code> o <code>git log --graph --oneline --all --decorate</code>).</p>
 
 
 
