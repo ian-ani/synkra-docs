@@ -13,6 +13,9 @@ Para garantizar una correcta separación de responsabilidades y facilitar el man
 
 ### 8.2.1. API (Spring Boot / Java)
 
+<details>
+  <summary>Clic para ver</summary>
+
 ```console
 api/
 ├── ApiApplication.java   # Entrypoint de la API
@@ -56,10 +59,14 @@ api/
     ├── SesionHorarioService.java
     └── SesionHorarioServiceImpl.java
 ```
+</details>
 
 *Nota: Este módulo sigue un diseño en capas tradicional de Spring Boot, separando claramente los controladores REST, la lógica de negocio (servicios), el acceso a datos (repositorios) y las entidades de dominio.*
 
 ### 8.2.2. Escritorio (C# / .NET)
+
+<details>
+  <summary>Clic para ver</summary>
 
 ```console
 desktop/
@@ -83,10 +90,14 @@ desktop/
     ├── ProfesoresView.xaml  # Diseño del listado de profesores
     └── ProfesoresView.xaml.cs  # Lógica del listado de profesores
 ```
+</details>
 
-*Nota: El desarrollo de escritorio se apoya en el patrón [MVVM](https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93modelo_de_vista), desacoplando la interfaz de usuario (Views) de la lógica de presentación (ViewModels) y la gestión de datos.*
+*Nota: El desarrollo de escritorio se apoya en el patrón <abbr title="Model–View–ViewModel">MVVM</abbr>, desacoplando la interfaz de usuario (Views) de la lógica de presentación (ViewModels) y la gestión de datos.*
 
 ### 8.2.3. Móvil y web (Flutter)
+
+<details>
+  <summary>Clic para ver</summary>
 
 ```console
 mobile/
@@ -117,6 +128,7 @@ mobile/
     ├── password_change_box.dart  # Caja para el cambio de contraseña (perfil)
     └── password_widget.dart  # Diseño del input de contraseña
 ```
+</details>
 
 *Nota: La estructura de Flutter agrupa los componentes de forma modular por responsabilidades (pages, services, models y widgets), facilitando la reutilización de código entre la versión móvil y web.*
 
