@@ -18,7 +18,7 @@ api/
 ├── ApiApplication.java   # Entrypoint de la API
 ├── config/
 │   ├── DataInitializer.java   # Crea un director
-│   └── OpenApiConfig.java   # Token JJWT
+│   └── OpenApiConfig.java   # Token JWT
 ├── controller/
 │   ├── AuthController.java   # Controlador para el inicio de sesión
 │   ├── BloqueCalendarioController.java   # Controlador para la gestión del bloqueo de calendario
@@ -57,6 +57,8 @@ api/
     └── SesionHorarioServiceImpl.java
 ```
 
+*Nota: Este módulo sigue un diseño en capas tradicional de Spring Boot, separando claramente los controladores REST, la lógica de negocio (servicios), el acceso a datos (repositorios) y las entidades de dominio.*
+
 ### 8.2.2. Escritorio (C# / .NET)
 
 ```console
@@ -82,6 +84,8 @@ desktop/
     └── ProfesoresView.xaml.cs  # Lógica del listado de profesores
 ```
 
+*Nota: El desarrollo de escritorio se apoya en el patrón [MVVM](https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93modelo_de_vista), desacoplando la interfaz de usuario (Views) de la lógica de presentación (ViewModels) y la gestión de datos.*
+
 ### 8.2.3. Móvil y web (Flutter)
 
 ```console
@@ -92,19 +96,18 @@ mobile/
 │   ├── profesor.dart  # Entidad profesores
 │   └── sesion_horario.dart  # Entidad horarios
 ├── pages/
-│   ├── auth_gate.dart
-│   ├── calendar_screen.dart
-│   ├── home_screen.dart
-│   ├── login_screen.dart
-│   ├── school_info_screen.dart
-│   ├── sesion_horario.dart
-│   ├── solicitud_calendar_screen.dart
-│   ├── solicitud_screen.dart
-│   └── user_screen.dart
+│   ├── auth_gate.dart  # Comprueba el token guardado contra la API, direcciona a Home o login
+│   ├── calendar_screen.dart  # Pantalla de calendario escolar
+│   ├── home_screen.dart  # Pantalla principal de la aplicación (una vez el usuario ha logueado)
+│   ├── login_screen.dart  # Pantalla de inicio de sesión
+│   ├── school_info_screen.dart  # Pantalla con información del centro escolar
+│   ├── solicitud_calendar_screen.dart  # Pantalla de calendario que permite solicitar días moscosos
+│   ├── solicitud_screen.dart  # Base para la pantalla de solicitud, está sin empezar
+│   └── user_screen.dart  # Pantalla con informacion del usuario: nombre, sesiones, etc
 ├── services/
 │   ├── api_client.dart  # Inicio de sesión y endpoints para peticiones a la API
 │   ├── api_config.dart  # Configuración de la API (dirección, puerto)
-│   ├── auth_service.dart  # Inicio y cierre de sesión
+│   ├── auth_service.dart  # Inicio y cierre de sesión 
 │   └── token_storage.dart  # Guarda el token JWT
 ├── utils/
 │   └── utils.dart  # Datos de prueba para el calendario
@@ -114,6 +117,8 @@ mobile/
     ├── password_change_box.dart  # Caja para el cambio de contraseña (perfil)
     └── password_widget.dart  # Diseño del input de contraseña
 ```
+
+*Nota: La estructura de Flutter agrupa los componentes de forma modular por responsabilidades (pages, services, models y widgets), facilitando la reutilización de código entre la versión móvil y web.*
 
 ## 8.3. Implementación de las funcionalidades
 
@@ -134,11 +139,11 @@ Para cada funcionalidad importante:
 
 ## 8.5. Librerías y dependencias
 
-### Dependencias utilizadas
+### 8.5.1. Dependencias utilizadas
 
 El detalle completo de las librerías empleadas en cada uno de los módulos del ecosistema Synkra (API, programa de escritorio y aplicación móvil/web), junto con sus respectivas versiones, funciones y justificación técnica, se encuentra recogido en el apartado [7.3. Frameworks y librerías](./07-arquitectura.md/#73-frameworks-y-librerías).
 
-### Archivos de configuración de dependencias
+### 8.5.2. Archivos de configuración de dependencias
 
 La gestión y declaración de las dependencias de cada subsistema se realiza a través de los correspondientes archivos de configuración de sus gestores de paquetes:
 
@@ -148,7 +153,7 @@ La gestión y declaración de las dependencias de cada subsistema se realiza a t
 
 ## 8.6. Repositorio del proyecto
 
-### Estructura de repositorios e historial de *commits*
+### 8.6.1. Estructura de repositorios e historial de *commits*
 
 Con el fin de mantener una correcta separación de responsabilidades y modularidad en el desarrollo, el código fuente del proyecto se ha distribuido en cuatro repositorios independientes (tres correspondientes a los distintos módulos del sistema y uno exclusivo para la documentación):
 
@@ -162,8 +167,14 @@ Con el fin de mantener una correcta separación de responsabilidades y modularid
 
 Adicionalmente, se puede acceder de forma directa a los repositorios principales (escritorio, móvil y API) desde los accesos directos ubicados en la esquina inferior derecha de la interfaz de la documentación web.
 
-### Control de versiones y gestión de ramas
+### 8.6.2. Control de versiones y ramas del proyecto
 
-A continuación, se muestra el flujo de trabajo y el estado de las ramas visualizado a través del cliente **SourceTree**:
+Para el desarrollo de Synkra se ha seguido una estrategia de ramificación basada en características, lo que permite aislar el desarrollo de cada funcionalidad antes de unificarla en el código común. 
 
-**Añadir imágenes del SourceTree.**
+Las ramas de trabajo principales son las siguientes:
+
+* **`main`**: Rama principal que contiene las versiones estables y definitivas para la entrega de los hitos del proyecto.
+* **`develop`**: Rama de integración donde se unifican de forma continua las distintas tareas y módulos desarrollados por el equipo.
+* **Ramas de características (*feature*)**: Empleadas de forma temporal para el desarrollo modular de componentes específicos (como `calendarScreen`, `conectar-api`, `LoginScreen`, `solicitud-moscosos`, `tema-oscuro`, entre otras).
+
+Para consultar el estado actualizado, el grafo de commits o la evolución en tiempo real de estas ramas, se puede emplear cualquier cliente de control de versiones como **SourceTree**, revisar directamente los repositorios en el **tablero de GitHub** (ver apartado anterior), o utilizar los comandos nativos de Git (por ejemplo, `git branch -a` o `git log --graph --oneline --all --decorate`).
