@@ -86,7 +86,7 @@ Se documentará la estructura de las tablas de la base de datos, indicando para 
 - Clave primaria y claves ajenas, cuando corresponda.
 - Restricciones aplicables.
 
-### Tabla `bloqueo_calendario`
+### 6.3.1. Tabla `bloqueo_calendario`
 
 | Campo | Tipo | PK/FK | Restricciones | Descripción |
 |-------|------|-------|---------------|-------------|
@@ -95,7 +95,7 @@ Se documentará la estructura de las tablas de la base de datos, indicando para 
 | `comentario` | `VARCHAR(255)` | - | Tamaño máximo de 255 caracteres | Comentario o razón del día bloqueado |
 | `tipo` | `ENUM` | - | - | Categoría del bloqueo (festivo, vacaciones, etc.). |
 
-### Tabla `grupo_alumnado`
+### 6.3.2. Tabla `grupo_alumnado`
 
 | Campo | Tipo | PK/FK | Restricciones | Descripción |
 |-------|------|-------|---------------|-------------|
@@ -103,7 +103,7 @@ Se documentará la estructura de las tablas de la base de datos, indicando para 
 | `id_profesor` | `INT` | FK | - | Identificador único del profesor |
 | `nombre_grupo` | `VARCHAR(255)` | - | - | Nombre del grupo |
 
-### Tabla `profesores`
+### 6.3.3. Tabla `profesores`
 
 | Campo | Tipo | PK/FK | Restricciones | Descripción |
 |-------|------|-------|---------------|-------------|
@@ -123,7 +123,7 @@ Se documentará la estructura de las tablas de la base de datos, indicando para 
 | `departamento` | `VARCHAR(255)` | - | - | Departamento al que pertenece el profesor |
 | `grupoAlumnado_cod_grupo` | `INT(11)` | FK | - | Código de grupo referenciando a `grupo_alumnado` |
 
-### Tabla `horarios`
+### 6.3.4. Tabla `horarios`
 
 | Campo | Tipo | PK/FK | Restricciones | Descripción |
 |-------|------|-------|---------------|-------------|
@@ -136,7 +136,7 @@ Se documentará la estructura de las tablas de la base de datos, indicando para 
 | `grupoAlumnado_cod_grupo` | `INT(11)` | FK | - | Código de grupo referenciando a `grupo_alumnado` |
 | `profesor_id` | `INT(11)` | FK | - | Identificador del profesor |
 
-### Tabla `solicitudes`
+### 6.3.5. Tabla `solicitudes`
 
 **Pendiente de completar.**
 

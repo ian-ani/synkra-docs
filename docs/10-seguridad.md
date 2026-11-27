@@ -22,7 +22,7 @@ La **administración de cuentas** y el **control de acceso** se basan en un mode
 
 - **Director:** Rol con **control total** sobre la plataforma. Posee de forma heredada todos los permisos del profesor y del gestor, además de la capacidad exclusiva para **gestionar operaciones avanzadas** sobre sesiones, grupos, profesorado y calendarios.
 
-### Seguridad de credenciales
+### 10.2.1. Seguridad de credenciales
 
 Para garantizar la integridad y confidencialidad de las cuentas, las contraseñas nunca se almacenan en texto plano. En su lugar, se cifran mediante el algoritmo **BCrypt**, que combina el hash resultante con un *salt* aleatorio único por cada clave. Este mecanismo protege los datos frente a ataques por fuerza bruta y el uso de tablas arcoíris (*rainbow tables*).
 

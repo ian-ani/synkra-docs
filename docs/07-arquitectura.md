@@ -96,7 +96,7 @@ A continuación, se detallan las principales dependencias utilizadas en el desar
 
 Durante el desarrollo de Synkra se han utilizado distintas herramientas para la programación de las aplicaciones, el diseño de la base de datos, el control de versiones, la gestión de la información y la elaboración de la documentación.
 
-### Entornos de desarrollo (IDEs) y editores
+### 7.4.1. Entornos de desarrollo y editores
 
 | Herramienta | Uso |
 |-------------|-----|
@@ -105,13 +105,13 @@ Durante el desarrollo de Synkra se han utilizado distintas herramientas para la 
 | **Visual Studio Code** | Editor utilizado para desarrollar la aplicación multiplataforma con Flutter y Dart; también se ha empleado para redactar y mantener la documentación del proyecto |
 | **Android Studio** | Herramienta utilizada para configurar y gestionar emuladores de dispositivos Android; aunque la aplicación Flutter se ejecutaba desde Visual Studio Code |
 
-### Control de versiones
+### 7.4.2. Control de versiones
 
 | Herramienta | Uso |
 |-------------|-----|
 | **GitHub** | Plataforma utilizada para alojar el repositorio del proyecto y gestionar el control de versiones del código fuente y documentación; también se utiliza GitHub Projects para organizar y realizar el seguimiento de las tareas mediante un tablero Kanban |
 
-### Herramientas de diseño
+### 7.4.3. Herramientas de diseño
 
 | Herramienta | Uso |
 |-------------|-----|
@@ -119,7 +119,7 @@ Durante el desarrollo de Synkra se han utilizado distintas herramientas para la 
 | **Herramienta de diseño de mockups** | - |
 | Drawio | Para la creación de algunos diagramas de esta documentación |
 
-### Bases de datos
+### 7.4.4. Bases de datos
 
 | Herramienta | Uso |
 |-------------|-----|
@@ -127,7 +127,7 @@ Durante el desarrollo de Synkra se han utilizado distintas herramientas para la 
 | **XAMPP** | Entorno utilizado para proporcionar y gestionar el servicio local de MySQL durante el desarrollo |
 | **phpMyAdmin** | Herramienta utilizada para administrar la base de datos MySQL mediante una interfaz web |
 
-### Documentación
+### 7.4.5. Documentación
 
 | Herramienta | Uso |
 |-------------|-----|

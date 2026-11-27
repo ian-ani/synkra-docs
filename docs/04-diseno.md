@@ -13,7 +13,7 @@ La solución propuesta estará formada por dos partes principales:
 La interfaz deberá facilitar el uso de las funcionalidades principales según el perfil de cada usuario.  
 El diseño de las interfaces puede verse sujeto a cambios y no reflejar el aspecto de las pantallas definitivas.
 
-### Diseño de la interfaz de escritorio:
+### 4.2.1. Diseño de la interfaz de escritorio
 
 ![Interfaz de escritorio para inicio de sesión](assets/escritorio/escritorio_login.png)
 
@@ -23,7 +23,7 @@ El diseño de las interfaces puede verse sujeto a cambios y no reflejar el aspec
 
 ![Interfaz de escritorio para la solicitud del día moscoso](assets/escritorio/escritorio_solicitud.png)
 
-### Diseño de la interfaz móvil y web:
+### 4.2.2. Diseño de la interfaz móvil y web
 
 ![Interfaz móvil](assets/movil/app1.png)
 
@@ -43,7 +43,7 @@ Se incorporarán los diagramas necesarios para representar el funcionamiento de 
 
 Se documentarán los principales procesos de la aplicación:
 
-### Solicitud de un día moscoso
+### 4.4.1. Solicitud de un día moscoso
 
 1. El profesor accede a la aplicación.
 2. Consulta los días disponibles.
@@ -51,7 +51,7 @@ Se documentarán los principales procesos de la aplicación:
 4. Realiza la solicitud.
 5. Consulta posteriormente el estado de la solicitud.
 
-### Gestión de solicitudes
+### 4.4.2. Gestión de solicitudes
 
 1. El equipo directivo accede al programa de gestión.
 2. Consulta las solicitudes recibidas.
@@ -59,7 +59,7 @@ Se documentarán los principales procesos de la aplicación:
 4. Aprueba o rechaza la solicitud.
 5. En caso de rechazo, indica el motivo correspondiente.
 
-### Importación de calendarios
+### 4.4.3. Importación de calendarios
 
 1. El gestor o el equipo directivo accede a las funciones de gestión.
 2. Selecciona el calendario escolar que desea importar o hace el bloqueo de rangos correspondiente.
