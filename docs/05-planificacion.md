@@ -2,7 +2,7 @@
 
 ## 5.1. Fases del proyecto
 
-### Primera etapa
+### 5.1.1. Primera etapa
 
 Esta fase se centra en establecer los cimientos del proyecto, validar la arquitectura cliente-servidor y desarrollar un producto mínimo viable funcional:
 
@@ -10,7 +10,7 @@ Esta fase se centra en establecer los cimientos del proyecto, validar la arquite
 - **Diseño e implementación base:** Modelado de datos, diseño de interfaces y desarrollo de las funcionalidades principales en las distintas plataformas del ecosistema (API REST, aplicación de escritorio, aplicación móvil y entorno web).
 - **Consolidación y entrega parcial:** Redacción de la documentación técnica correspondiente y presentación de la primera etapa evaluable del proyecto.
 
-### Segunda etapa
+### 5.2.2. Segunda etapa
 
 **Pendiente de completar.**
 
@@ -51,4 +51,7 @@ Dicho registro también se está haciendo mediante **GitHub Projects** y **Kanba
 
 ## 5.6. Problemas y cambios en la planificación
 
-**Pendiente de completar.**
+Durante el desarrollo del proyecto se han identificado las siguientes desviaciones y ajustes menores sobre la planificación inicial:
+
+- **Dependencia del backend (API):** Se produjo un ligero retraso en el desarrollo de la aplicación móvil y el programa de escritorio, ya que fue necesario priorizar y avanzar primero en la implementación de la API para asegurar que el núcleo y los endpoints estuvieran listos antes de integrarlos en las interfaces de cliente.
+- **Inclusión de Swagger:** La integración de la documentación interactiva de la API estaba prevista inicialmente para el 1 de noviembre de 2026. Debido a un despiste grupal en la planificación inicial, su incorporación se pospuso y se completó finalmente en el siguiente sprint del módulo de la API, el 15 de noviembre de 2026.
