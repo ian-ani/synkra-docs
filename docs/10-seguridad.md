@@ -6,7 +6,7 @@ Durante el análisis inicial se ha identificado la necesidad de estudiar qué in
 
 ## 10.1. Sistema de autenticación
 
-La autenticación se implementa mediante **Spring Security** (en combinación con Spring Boot) para proteger los extremos de la API y restringir el acceso a determinadas operaciones. Asimismo, se emplea la librería **JJWT** para facilitar la gestión de sesiones de usuario y la autenticación basada en tokens.
+La autenticación se implementa mediante **Spring Security** (en combinación con Spring Boot) para proteger los extremos de la API y restringir el acceso a determinadas operaciones. Asimismo, se emplea la librería **<abbr title="Java JSON Web Token">JJWT</abbr>** para facilitar la gestión de sesiones de usuario y la autenticación basada en tokens.
 
 El acceso al sistema se realiza mediante **correo electrónico** y **contraseña**. Los usuarios no autenticados no podrán realizar ninguna operación en la aplicación, a excepción de intentar iniciar sesión.
 
@@ -38,7 +38,7 @@ El control de acceso se rige por los roles de usuario:
 
 ## 10.4. Protección frente a accesos no autorizados
 
-Cualquier usuario que pretenda acceder a un recurso protegido debe estar debidamente autenticado mediante sus credenciales (correo y contraseña), además de incluir un token JWT válido en las peticiones a la API.
+Cualquier usuario que pretenda acceder a un recurso protegido debe estar debidamente autenticado mediante sus credenciales (correo y contraseña), además de incluir un token <abbr title="JSON Web Token">JWT</abbr> válido en las peticiones a la API.
 
 ## 10.5. Validación de datos
 
@@ -54,6 +54,6 @@ Se garantiza que el acceso a los recursos esté estrictamente condicionado por e
 
 Actualmente no se realizan copias de seguridad de los datos.
 
-## 10.8. Cumplimiento de la normativa de protección de datos aplicable (RGPD y LOPDGDD, cuando corresponda)
+## 10.8. Cumplimiento de la normativa de protección de datos aplicable (<abbr title="Reglamento General de Protección de Datos">RGPD</abbr> y <abbr title="Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales">LOPDGDD</abbr>, cuando corresponda)
 
 **Pendiente de análisis e implementación** cuando corresponda según el despliegue final.

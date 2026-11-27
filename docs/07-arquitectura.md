@@ -2,13 +2,13 @@
 
 ## 7.1. Arquitectura de la aplicación
 
-1. **Tipo de arquitectura:** arquitectura cliente-servidor, con una API REST como intermediaria.
+1. **Tipo de arquitectura:** arquitectura cliente-servidor, con una <abbr title="Application Programming Interface">API</abbr> <abbr title="Representational State Transfer">REST</abbr> como intermediaria.
 2. **Componentes principales:**
     - Aplicación móvil y web (Flutter), utilizada por el profesorado.
-    - Aplicación de escritorio (C# y WPF), utilizada por dirección y gestión.
+    - Aplicación de escritorio (C# y <abbr title="Windows Presentation Foundation">WPF</abbr>), utilizada por dirección y gestión.
     - API REST (Java y Spring Boot), que procesa las peticiones y centraliza la lógica del servidor.
     - Base de datos (MySQL), donde se almacena la información.
-3. **Comunicación:** las aplicaciones cliente envían peticiones HTTP a la API, que consulta o modifica la información de MySQL y devuelve las respuestas correspondientes.
+3. **Comunicación:** las aplicaciones cliente envían peticiones <abbr title="Hypertext Transfer Protocol">HTTP</abbr> a la API, que consulta o modifica la información de MySQL y devuelve las respuestas correspondientes.
 4. **Diagrama:** 
 
 ![Diagrama de la arquitectura del sistema](assets/cliente-servidor.png)
@@ -52,7 +52,7 @@ La configuración principal del proyecto es la siguiente:
 
 - **Lenguaje de programación:** Dart.
 - **Framework:** Flutter.
-- **Versión del SDK de Dart:** 3.13.7 o superior.
+- **Versión del <abbr title="Software Development Kit">SDK</abbr> de Dart:** 3.13.7 o superior.
 - **Gestor de dependencias:** Pub.
 - **Versión de la aplicación:** 1.0.0.
 - **Plataformas de destino:** Android y web, entre otras plataformas compatibles con Flutter.
@@ -83,11 +83,11 @@ A continuación, se detallan las principales dependencias utilizadas en el desar
 |----------------------|---------|---------|--------------------|
 | **Spring Boot** | 4.1.1 | Framework principal para desarrollar y ejecutar la API | Facilita la creación de servicios web y la configuración del servidor, es un estándar en Java y hay una amplia documentación disponible |
 | **Spring Security** | Gestionada por Spring Boot 4.1.1 | Gestiona la autenticación, la autorización y el control de acceso según los roles | Permite proteger los endpoints de la API y restringir el acceso a determinadas operaciones |
-| **JJWT** | 0.12.6 | Permite generar y validar tokens JWT para gestionar la autenticación mediante tokens | Facilita la autenticación de los usuarios y el mantenimiento de sus sesiones mediante tokens |
-| **Spring Data JPA** | Gestionada por Spring Boot 4.1.1 | Facilita la comunicación con la base de datos y la gestión de las entidades y consultas | Reduce la necesidad de escribir y consultar SQL manualmente |
+| **<abbr title="Java JSON Web Token">JJWT</abbr>** | 0.12.6 | Permite generar y validar tokens JWT para gestionar la autenticación mediante tokens | Facilita la autenticación de los usuarios y el mantenimiento de sus sesiones mediante tokens |
+| **Spring Data <abbr title="Java Persistence API, actualmente Jakarta Persistence">JPA</abbr>** | Gestionada por Spring Boot 4.1.1 | Facilita la comunicación con la base de datos y la gestión de las entidades y consultas | Reduce la necesidad de escribir y consultar SQL manualmente |
 | **Hibernate** | Gestionada por Spring Boot 4.1.1 a través de JPA | Implementa el mapeo entre las entidades de Java y las tablas de la base de datos | Permite trabajar con los datos mediante objetos Java |
 | **Spring Boot Validation** | Gestionada por Spring Boot 4.1.1 | Permite validar los datos recibidos por la API | Ayuda a evitar que se procesen datos incorrectos o que no cumplan las restricciones establecidas |
-| **Spring Web MVC** | Gestionada por Spring Boot 4.1.1 | Permite crear los controladores y endpoints HTTP de la API | Facilita la comunicación entre las aplicaciones clientes y el servidor |
+| **Spring Web <abbr title="Model-View-Controller">MVC</abbr>** | Gestionada por Spring Boot 4.1.1 | Permite crear los controladores y endpoints HTTP de la API | Facilita la comunicación entre las aplicaciones clientes y el servidor |
 | **Springdoc OpenAPI** | 3.1.0 | Genera documentación de los endpoints de la API y permite consultarla mediante Swagger UI | Facilita la consulta y las pruebas de los servicios disponibles |
 | **MySQL Connector/J** | Gestionada por Spring Boot 4.1.1 | Permite establecer la conexión entre la aplicación Java y MySQL | Es el controlador necesario para que Spring Boot pueda comunicarse con la base de datos |
 | **Lombok** | Gestionada por Spring Boot 4.1.1 | Reduce código repetitivo (*boilerplate* en inglés) en las clases Java, como *getters*, *setters* y constructores | Facilita el mantenimiento y mejora la legibilidad del código |
@@ -116,8 +116,7 @@ Durante el desarrollo de Synkra se han utilizado distintas herramientas para la 
 | Herramienta | Uso |
 |-------------|-----|
 | **DrawSQL** | Herramienta utilizada para diseñar y representar el diagrama entidad-relación de la base de datos |
-| **Herramienta de diseño de mockups** | - |
-| Drawio | Para la creación de algunos diagramas de esta documentación |
+| **Drawio** | Para la creación de algunos diagramas de esta documentación |
 
 ### 7.4.4. Bases de datos
 

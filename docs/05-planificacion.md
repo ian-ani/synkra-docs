@@ -7,7 +7,7 @@
 Esta fase se centra en establecer los cimientos del proyecto, validar la arquitectura cliente-servidor y desarrollar un producto mínimo viable funcional:
 
 - **Análisis y planificación:** Formación del equipo de trabajo, definición del alcance del problema, capacitación en las tecnologías seleccionadas y estructuración del plan inicial.
-- **Diseño e implementación base:** Modelado de datos, diseño de interfaces y desarrollo de las funcionalidades principales en las distintas plataformas del ecosistema (API REST, aplicación de escritorio, aplicación móvil y entorno web).
+- **Diseño e implementación base:** Modelado de datos, diseño de interfaces y desarrollo de las funcionalidades principales en las distintas plataformas del ecosistema (<abbr title="Application Programming Interface">API</abbr> <abbr title="Representational State Transfer">REST</abbr>, aplicación de escritorio, aplicación móvil y entorno web).
 - **Consolidación y entrega parcial:** Redacción de la documentación técnica correspondiente y presentación de la primera etapa evaluable del proyecto.
 
 ### 5.2.2. Segunda etapa

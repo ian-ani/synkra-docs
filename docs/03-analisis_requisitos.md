@@ -25,10 +25,10 @@ El equipo directivo también forma parte del profesorado, por lo que podrá real
 ### 3.2.1. Seguridad
 
 - Las contraseñas se almacenan de forma segura mediante funciones hash y el uso de un *salt*, dificultando su recuperación mediante tablas arcoíris y ataques basados en contraseñas precalculadas.
-- La autenticación de los usuarios se realiza mediante tokens JWT.
+- La autenticación de los usuarios se realiza mediante tokens <abbr title="JSON Web Token">JWT</abbr>.
 - Los permisos de acceso dependen del rol asignado a cada usuario.
 - Los usuarios no pueden acceder a operaciones o información a la que no hayan sido autorizados.
-- Los usuarios no autenticados no tienen acceso a ningún recurso de la API.
+- Los usuarios no autenticados no tienen acceso a ningún recurso de la <abbr title="Application Programming Interface">API</abbr>.
 
 Ver apartado [10. Seguridad](./10-seguridad.md#10-seguridad) para más información.
 
@@ -47,12 +47,12 @@ Ver apartado [10. Seguridad](./10-seguridad.md#10-seguridad) para más informaci
 
 - La aplicación del profesorado funciona en dispositivos Android y navegadores web compatibles.
 - La aplicación de escritorio funciona en sistemas Windows.
-- Ambas aplicaciones se pueden comunicar con la misma API.
+- Ambas aplicaciones se pueden comunicar con la misma <abbr title="Application Programming Interface">API</abbr>.
 
 ### 3.2.5. Disponibilidad
 
 - El profesorado puede consultar la disponibilidad de días moscosos y realizar solicitudes cuando el servicio está operativo.
-- La API y la base de datos estarán funcionando para permitir las operaciones de cada aplicación.
+- La <abbr title="Application Programming Interface">API</abbr> y la base de datos estarán funcionando para permitir las operaciones de cada aplicación.
 - Los calendarios permiten identificar los días en los que se pueden realizar solicitudes y aquellos que están bloqueados.
 
 ## 3.3. Usuarios y roles
